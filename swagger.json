@@ -1,0 +1,1209 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "SHOP REST API",
+        "version": "v1"
+    },
+    "paths": {
+        "/api/ApplicationUser/CreateAdmin": {
+            "post": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ApplicationUser/CreateCustomer": {
+            "post": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ApplicationUser/UpdateCustomer/:userId": {
+            "post": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateCustomerViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ApplicationUser/UpdatePassword": {
+            "post": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdatePasswordViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ApplicationUser/GetAllUser": {
+            "get": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/ApplicationUser/DeleteUerById": {
+            "get": {
+                "tags": [
+                    "ApplicationUser"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Authenticate/login": {
+            "post": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LoginModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Authenticate/ForgetPassword": {
+            "post": {
+                "tags": [
+                    "Authenticate"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ForgetPasswordModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/CustomerProblem/AddCustomerProblem": {
+            "post": {
+                "tags": [
+                    "CustomerProblem"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerProblemViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/CustomerProblem/SolveCustomerProblem/{customerProblemId}": {
+            "post": {
+                "tags": [
+                    "CustomerProblem"
+                ],
+                "parameters": [{
+                    "name": "customerProblemId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerProblemSolvedViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/CustomerProblem/GetAllCustomerProblem": {
+            "get": {
+                "tags": [
+                    "CustomerProblem"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterPaymentMethod/AddMasterPaymentMethodList": {
+            "post": {
+                "tags": [
+                    "MasterPaymentMethod"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MasterPaymentMethod"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterPaymentMethod/GetMasterPaymentMethodList": {
+            "get": {
+                "tags": [
+                    "MasterPaymentMethod"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterProblemType/AddMasterProblemType": {
+            "post": {
+                "tags": [
+                    "MasterProblemType"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MasterProblemType"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterProblemType/UpdateMasterProblemType": {
+            "post": {
+                "tags": [
+                    "MasterProblemType"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MasterProblemType"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterProblemType/GetMasterProblemTypeList": {
+            "get": {
+                "tags": [
+                    "MasterProblemType"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterProblemType/GetMasterProblemTypeDetailsById/{id}": {
+            "get": {
+                "tags": [
+                    "MasterProblemType"
+                ],
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterShippingMethod/AddMasterShippingMethod": {
+            "post": {
+                "tags": [
+                    "MasterShippingMethod"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MasterShippingMethod"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterShippingMethod/UpdateMasterShippingMethod": {
+            "post": {
+                "tags": [
+                    "MasterShippingMethod"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MasterShippingMethod"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterShippingMethod/GetMasterShippingMethodList": {
+            "get": {
+                "tags": [
+                    "MasterShippingMethod"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/MasterShippingMethod/GetMasterShippingMethodDetailsById/{id}": {
+            "get": {
+                "tags": [
+                    "MasterShippingMethod"
+                ],
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Order/PlaceOrder": {
+            "post": {
+                "tags": [
+                    "Order"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OrderViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Order/AddNewShippingAddress": {
+            "post": {
+                "tags": [
+                    "Order"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ShippingAddressViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Order/GetAllOrderListOfCustomer": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Order/GetOrderListByCustomerId/{customerId}": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "parameters": [{
+                    "name": "customerId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Order/GetUserOrderDetailsByOrderId/{orderId}": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "parameters": [{
+                    "name": "orderId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/CreateProductCategory": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductCategory"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/UpdateProductCategory": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductCategory"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/GetProductCategoryList": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/GetProductCategoryById/{id}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/CreateProduct": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateProductViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/UpdateProductDetails/{productId}": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "productId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductDetailsViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/UpdateProductPrice/{productId}": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "productId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProductPriceViewModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/UploadProductImage/{productId}": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "productId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "formFile": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                }
+                            },
+                            "encoding": {
+                                "formFile": {
+                                    "style": "form"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/SearchProduct/{keyword}": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "keyword",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/GetAllProductList": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/GetProductListByCategory/{categoryId}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "categoryId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/GetProductDetailsByProductId/{id}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/Product/DeleteProductById/{productId}": {
+            "delete": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [{
+                    "name": "productId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "RegisterViewModel": {
+                "required": [
+                    "email",
+                    "firstName",
+                    "lastName",
+                    "password"
+                ],
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "UpdateCustomerViewModel": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "UpdatePasswordViewModel": {
+                "type": "object",
+                "properties": {
+                    "currentPassword": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "newPassword": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "LoginModel": {
+                "required": [
+                    "password",
+                    "email"
+                ],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "nullable": true
+            },
+            "RefreshTokenModel": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "refreshToken": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "ForgetPasswordModel": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "Object": {
+                "type": "object",
+                "nullable": true
+            },
+            "CustomerProblemViewModel": {
+                "type": "object",
+                "properties": {
+                    "masterProblemTypeId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phone": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "problemDetails": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "problemSolve": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "MasterLocation": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "details": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "addedOn": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "nullable": true
+            },
+            "MasterPaymentMethod": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "MasterProblemType": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "problemType": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "MasterShippingMethod": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "details": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "deliveryCost": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "nullable": true
+            },
+            "OrderDetailsViewModel": {
+                "type": "object",
+                "properties": {
+                    "orderDetailsId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "productId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "masterLocationId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "orderQty": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "nullable": true
+            },
+            "OrderShippingAddressViewModel": {
+                "type": "object",
+                "properties": {
+                    "shippingAddressId": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "nullable": true
+            },
+            "OrderBillingAddressViewModel": {
+                "type": "object",
+                "properties": {
+                    "billingAddressId": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "nullable": true
+            },
+            "MasterShippingMethodViewModel": {
+                "type": "object",
+                "properties": {
+                    "masterShippingMethodId": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "nullable": true
+            },
+            "MasterPaymentMethodViewModel": {
+                "type": "object",
+                "properties": {
+                    "masterPaymentMethodId": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "nullable": true
+            },
+            "OrderPaymentViewModel": {
+                "type": "object",
+                "properties": {
+                    "trnxId": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "OrderViewModel": {
+                "type": "object",
+                "properties": {
+                    "orderDetailsList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrderDetailsViewModel"
+                        },
+                        "nullable": true
+                    },
+                    "shippingAddress": {
+                        "$ref": "#/components/schemas/OrderShippingAddressViewModel"
+                    },
+                    "paymentMethod": {
+                        "$ref": "#/components/schemas/MasterPaymentMethodViewModel"
+                    }
+                },
+                "nullable": true
+            },
+            "ShippingAddressViewModel": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "city": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "BillingAddressViewModel": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "state": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "city": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "ProductCategory": {
+                "type": "object",
+                "properties": {
+                    "productCategoryId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "CreateProductViewModel": {
+                "type": "object",
+                "properties": {
+                    "productCategoryId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "productName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "salesPrice": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "productImage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "productDescription": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "ProductDetailsViewModel": {
+                "type": "object",
+                "properties": {
+                    "productDescription": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "CustomerProblemSolvedViewModel": {
+                "type": "object",
+                "properties": {
+                    "problemSolve": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "nullable": true
+            },
+            "ProductPriceViewModel": {
+                "type": "object",
+                "properties": {
+                    "salesPrice": {
+                        "type": "number",
+                        "format": "integer"
+                    }
+                },
+                "nullable": true
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "Enter the request header in the following box to add Jwt To grant authorization Token: Bearer Token",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [{
+        "Bearer": []
+    }]
+}
