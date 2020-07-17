@@ -57,16 +57,8 @@ app.use((error, req, res, next) => {
     });
 });
 
-// sequelize
-// // .sync({ force: true })
-//     .sync()
+sequelize
+// .sync({ force: true })
+    .sync()
 
-var http = require('http');
-var server = http.createServer(app, function(req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    var message = 'It works with the server!\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        response = [message, version].join('\n');
-    res.end(response);
-});
-server.listen(console.log("Connected!"));
+module.exports = app;
